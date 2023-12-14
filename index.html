@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <form id="savingForm">
+        <label for="initialAmount">Initial Savings Amount</label><br>
+        <input type="number" id="initialAmount" name="initialAmount"><br>
+        <label for="interestRate">Annual Interest Rate (%)</label><br>
+        <input type="number" id="interestRate" name="interestRate"><br>
+        <label for="period">Deposit Period in Years </label><br>
+        <input type="number" id="period" name="period"><br>
+        <button type="button"  onclick ="hitungTotal()">Calculate Total</button>
+        <div class="card">
+            <div class="body-card">
+           <h2> Calculate Interest</h2>
+           <div id="output"></div>
+            </div>
+            <button type="button" width="50%" onclick ="updateChart()">Show Chart</button>
+        </div> 
+    </form>
+    
+    <div><canvas id="chart" width="400" height="200"></canvas></div>
+    <script src="./home.js"></script>
+</body>
+</html>
